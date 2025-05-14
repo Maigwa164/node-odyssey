@@ -1,14 +1,21 @@
-const http = require("http");
+/***************practice on files */
+// const fs = require('fs');
 
-const server = http.createServer((req, res) => {
-  console.log(req.url, req.method, req.headers);
+// fs.writeFileSync('practice.txt', 'recalling the consept');
 
-  res.setHeader("Content-Type", "text/html");
-  res.write("<html>");
-  res.write("<head><title>practice</title></head>");
-  res.write("<body> David is doing a refresher</body>");
-  res.write("</body");
-  res.end();
-});
+/*****************practice on res and req */
 
-server.listen(3000);
+// const http = require("http");
+
+// const server = http.createServer((req, res) => {
+//   console.log(req.url, req.method, req.headers);
+
+//   res.setHeader("Content-Type", "text/html");
+//   res.write("<html>");
+//   res.write("<head><title>practice</title></head>");
+//   res.write("<body> David is doing a refresher</body>");
+//   res.write("</body");
+//   res.end();
+// });
+
+// server.listen(3000);
