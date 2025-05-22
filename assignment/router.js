@@ -11,7 +11,7 @@ const requestHandler = (req, res) => {
     res.write('<html>');
     res.write('<head><title>form</title></head>');
     res.write(
-      '<body><form action = "./create-user" method = "POST"><input type="text" name="user"></input><button type ="submit">submit</button></form></body'
+      '<body><form action = "./create-user" method = "POST"><input type="text" name="username"></input><button type ="submit">submit</button></form></body'
     );
     res.write('</html>');
     return res.end();
@@ -34,9 +34,11 @@ const requestHandler = (req, res) => {
 
     req.on('end', () => {
       const pasrsedBody = Buffer.concat(body).toString();
+      // console.log(pasrsedBody);
       const message = pasrsedBody.split('=')[1];
       // const message = pasrsedBody.split('=')[1];
       console.log(message);
+
       res.statusCode = 302;
       res.setHeader('Location', '/');
       return res.end();
