@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Maigwa164/node-odyssey/issues"
   },
-  "homepage": "https://github.com/Maigwa164/node-odyssey#readme"
+  "homepage": "https://github.com/Maigwa164/node-odyssey#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
