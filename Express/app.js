@@ -1,5 +1,5 @@
 // ****core modules***
-const http = require('http');
+// const http = require('http'); ---not needed
 
 // ****npm modules***
 const express = require('express');
@@ -14,5 +14,8 @@ app.use((req, res, next) => {
   console.log('In the second middleware');
   res.send('<h1>Hello from Express</h1>');
 });
-const server = http.createServer(app);
-server.listen(3000);
+
+// const server = http.createServer(app);
+// server.listen(3000);****shortend to ⏓
+
+app.listen(3000);
