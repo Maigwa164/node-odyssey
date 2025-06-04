@@ -6,9 +6,6 @@ const router = express.Router();
 //Admin add-product -> GET
 
 router.get('/add-product', (req, res, next) => {
-  // res.send(
-  //   '<form action = "/admin/add-product" method = "POST"><input = "text" name = "title"></input><button type = "submit">submit</button></form>'
-  // );
   res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
 });
 
