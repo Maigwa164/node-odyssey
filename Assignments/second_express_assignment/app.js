@@ -13,4 +13,5 @@ const app = express();
 // middlewares routes
 
 app.use(homeRoute);
+app.use(userRoutes);
 app.listen(8080);
