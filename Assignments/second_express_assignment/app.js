@@ -18,6 +18,6 @@ app.use(homeRoute);
 app.use(userRoutes);
 
 app.use('/', (req, res, next) => {
-  res.sendFile(path.join(__dirname, 'views', '404.html'));
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 app.listen(8080);
