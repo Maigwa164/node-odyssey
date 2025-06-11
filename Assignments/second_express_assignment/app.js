@@ -1,4 +1,5 @@
 //core modules
+const path = require('path');
 
 //package modules
 const express = require('express');
@@ -14,4 +15,8 @@ const app = express();
 
 app.use(homeRoute);
 app.use(userRoutes);
+
+app.use('/', (req, res, next) => {
+  res.sendFile(path.join(__dirname, 'views', '404.html'));
+});
 app.listen(8080);
