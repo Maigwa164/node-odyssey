@@ -12,7 +12,8 @@ const adminRoute = require('./routes/admin.js');
 const shopRoute = require('./routes/shop.js');
 
 app.use(bodyParser.urlencoded());
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static(path.join(__dirname, 'public'))); //fetch css files
 
 app.use('/admin', adminRoute);
 
