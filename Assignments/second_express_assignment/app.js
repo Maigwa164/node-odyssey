@@ -10,8 +10,7 @@ const userRoutes = require('./routes/user.js');
 //-------****--------
 const app = express();
 
-// app.use((req, res, next) => {
-//   res.send('<h1>Hello world</h1>');
-// });
+// middlewares routes
 
+app.use(homeRoute);
 app.listen(8080);
