@@ -10,12 +10,13 @@ const app = express();
 //*****my modules */
 const adminRoute = require('./routes/admin.js');
 const shopRoute = require('./routes/shop.js');
+const adminData = require('./routes/admin.js');
 
 app.use(bodyParser.urlencoded());
 
 app.use(express.static(path.join(__dirname, 'public'))); //fetch css files
 
-app.use('/admin', adminRoute);
+app.use('/admin', adminData.routes);
 
 app.use(shopRoute);
 
