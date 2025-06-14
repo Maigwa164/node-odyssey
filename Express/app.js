@@ -6,6 +6,9 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+//templating Engine
+app.set('view engine', 'pug');
+app.set('views', 'views');
 
 //*****my modules */
 const adminRoute = require('./routes/admin.js');
