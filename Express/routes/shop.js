@@ -11,7 +11,8 @@ router.get('/', (req, res, next) => {
   // res.send('<h1>Hello from Express</h1>');
   // console.log(adminData.products);
   // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-  res.render('shop'); //rendering shop dynamically
+  const products = adminData.products;
+  res.render('shop', { prods: products, docTitle: 'Shop' }); //rendering shop dynamically
 });
 
 module.exports = router;
