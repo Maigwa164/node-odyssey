@@ -14,6 +14,7 @@ app.set('views', 'views');
 const adminRoute = require('./routes/admin.js');
 const shopRoute = require('./routes/shop.js');
 const adminData = require('./routes/admin.js');
+const { render } = require('pug');
 
 app.use(bodyParser.urlencoded());
 
@@ -24,7 +25,8 @@ app.use('/admin', adminData.routes);
 app.use(shopRoute);
 
 app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+  // res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+  res.render('404', { docTitle: 'Page not found!' });
 });
 
 // const server = http.createServer(app);
