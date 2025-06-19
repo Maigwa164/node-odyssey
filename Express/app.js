@@ -5,16 +5,24 @@ const path = require('path');
 // ****npm modules***
 const express = require('express');
 const bodyParser = require('body-parser');
+const expressHbs = require('express-handlebars');
+
 const app = express();
+
 //templating Engine
-app.set('view engine', 'pug');
+/**Express-handlebars */
+app.engine('hbs', expressHbs());
+app.set('view engine', 'hbs');
+
+//**pug */
+// app.set('view engine', 'pug');
 app.set('views', 'views');
 
 //*****my modules */
 const adminRoute = require('./routes/admin.js');
 const shopRoute = require('./routes/shop.js');
 const adminData = require('./routes/admin.js');
-const { render } = require('pug');
+// const { render } = require('pug');
 
 app.use(bodyParser.urlencoded());
 
