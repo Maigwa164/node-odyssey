@@ -5,21 +5,24 @@ const path = require('path');
 // ****npm modules***
 const express = require('express');
 const bodyParser = require('body-parser');
-const expressHbs = require('express-handlebars');
+// const expressHbs = require('express-handlebars');
 
 const app = express();
 
 //templating Engine
+//******EJS */
+app.set('view engine', 'ejs');
+
 /**Express-handlebars */
-app.engine(
-  'hbs',
-  expressHbs({
-    layoutsDir: 'views/layouts/',
-    defaultLayout: 'main-layout',
-    extname: 'hbs',
-  })
-);
-app.set('view engine', 'hbs');
+// app.engine(
+//   'hbs',
+//   expressHbs({
+//     layoutsDir: 'views/layouts/',
+//     defaultLayout: 'main-layout',
+//     extname: 'hbs',
+//   })
+// );
+// app.set('view engine', 'hbs');
 
 //**pug */
 // app.set('view engine', 'pug');

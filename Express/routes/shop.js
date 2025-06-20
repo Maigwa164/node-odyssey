@@ -17,7 +17,7 @@ router.get('/', (req, res, next) => {
     docTitle: 'Shop',
     path: '/',
     hasProducts: products.length > 0,
-    productCss: true,
+    productCSS: true,
     activeShop: true,
   }); //rendering shop dynamically
 });
