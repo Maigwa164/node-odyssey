@@ -12,7 +12,12 @@ router.get('/', (req, res, next) => {
   // console.log(adminData.products);
   // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
   const products = adminData.products;
-  res.render('shop', { prods: products, docTitle: 'Shop', path: '/' }); //rendering shop dynamically
+  res.render('shop', {
+    prods: products,
+    docTitle: 'Shop',
+    path: '/',
+    hasProducts: products.length > 0,
+  }); //rendering shop dynamically
 });
 
 module.exports = router;
