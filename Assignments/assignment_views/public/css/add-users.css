@@ -1,12 +1,34 @@
-/* css/add-user.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
 .container {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center; /* horizontal center */
+  height: calc(100vh - 60px); /* full height minus nav */
+  padding-top: 20px; /* small padding below nav */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input,
