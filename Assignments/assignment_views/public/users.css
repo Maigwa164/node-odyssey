@@ -1,0 +1,17 @@
+/* css/users.css */
+.container {
+  padding: 20px;
+}
+
+.user-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.user-list li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
