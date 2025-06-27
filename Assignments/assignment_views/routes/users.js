@@ -1,13 +1,14 @@
-//Core modules
-const path = require('path');
-
 //NPM Package
 const express = require('express');
 
-const router = require(express.Router());
+//Core modules
+const path = require('path');
+
+const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  res.sendFile();
+  // res.sendFile(path.join(__dirname, '..', 'views', 'users.html'));
+  res.send('<h1>users heey</h1>');
 });
 
 module.exports = router;
