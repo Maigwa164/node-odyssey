@@ -9,7 +9,8 @@ const app = express();
 
 //Importing my  Route packages
 const userRoute = require('./routes/users.js');
-const addUserRoute = require('./routes/add-users.js');
+// const addUserRoute = require('./routes/add-users.js');
+const addUserData = require('./routes/add-users.js');
 
 //Serving files Statically CSS
 app.use(express.static(path.join(__dirname, 'public')));
@@ -23,7 +24,7 @@ app.set('views', 'views');
 
 //funel
 app.use(userRoute);
-app.use('/admin', addUserRoute);
+app.use('/admin', addUserData.routes);
 
 app.use((req, res, next) => {
   // res.sendFile(path.join(__dirname, 'views', '404.html'));

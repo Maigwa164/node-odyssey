@@ -14,7 +14,11 @@ router.get('/add-users', (req, res, next) => {
 });
 
 router.post('/add-users', (req, res, next) => {
-  products.push({ title: req.req.body.title });
+  users.push({ title: req.body.title });
   res.redirect('/');
 });
-module.exports = router;
+
+// module.exports = router;
+
+exports.routes = router;
+exports.users = users;
