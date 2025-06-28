@@ -2,6 +2,7 @@
 const path = require('path');
 
 //NPM PACKACKEGS
+const bodyParser = require('body-parser');
 const express = require('express');
 
 const app = express();
@@ -13,12 +14,17 @@ const addUserRoute = require('./routes/add-users.js');
 //Serving files Statically CSS
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Importing View Engine
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 //funel
 app.use(userRoute);
 app.use(addUserRoute);
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, 'views', '404.html'));
+  // res.sendFile(path.join(__dirname, 'views', '404.html'));
+  res.render('404.ejs', { docTitle: 'Page not found!' });
 });
 
 app.listen(3000);
