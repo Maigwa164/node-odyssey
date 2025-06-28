@@ -13,7 +13,7 @@ router.get('/add-users', (req, res, next) => {
   res.render('add-users', { docTitle: 'add-users' });
 });
 
-router.post('/admin/add-users', (req, res, next) => {
+router.post('/add-users', (req, res, next) => {
   products.push({ title: req.req.body.title });
   res.redirect('/');
 });
