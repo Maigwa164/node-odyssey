@@ -20,7 +20,7 @@ app.set('views', 'views');
 
 //funel
 app.use(userRoute);
-app.use(addUserRoute);
+app.use('/admin', addUserRoute);
 
 app.use((req, res, next) => {
   // res.sendFile(path.join(__dirname, 'views', '404.html'));
