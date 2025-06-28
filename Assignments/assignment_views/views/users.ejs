@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title><%=docTitle%></title>
+    <title><%= docTitle %></title>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/users.css" />
   </head>
@@ -13,10 +13,16 @@
     </nav>
 
     <div class="container">
-      <h1>No users found</h1>
+      <% if (users.length > 0) { %>
       <ul class="user-list" id="userList">
-        <!-- Future users will appear here -->
+        <% for (let user of users) { %>
+        <li><%= user.title %></li>
+        <!-- Adjust according to your user object -->
+        <% } %>
       </ul>
+      <% } else { %>
+      <h1>No users found</h1>
+      <% } %>
     </div>
   </body>
 </html>
