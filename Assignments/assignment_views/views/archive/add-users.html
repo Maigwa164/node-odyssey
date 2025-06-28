@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add User</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/add-users.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="users.html">Users</a>
+      <a href="add-user.html" class="active">Add User</a>
+    </nav>
+
+    <div class="container">
+      <h1>Add a New User</h1>
+      <form action="/admin/add-product" method="POST">
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter user name"
+          required
+        />
+        <button type="submit">Add User</button>
+      </form>
+    </div>
+  </body>
+</html>

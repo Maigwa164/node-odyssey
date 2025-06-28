@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Add User</title>
+    <title><%-docTitle%></title>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/add-users.css" />
   </head>
@@ -15,7 +15,12 @@
     <div class="container">
       <h1>Add a New User</h1>
       <form action="/admin/add-product" method="POST">
-        <input type="text" name="name" placeholder="Enter user name" required />
+        <input
+          type="text"
+          name="title"
+          placeholder="Enter user name"
+          required
+        />
         <button type="submit">Add User</button>
       </form>
     </div>
