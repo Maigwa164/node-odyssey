@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Page Not Found</title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/404.css" />
-  </head>
-  <body>
-    <nav>
-      <a href="/">Users</a>
-      <a href="/admin/add-users">Add User</a>
-    </nav>
+<%-include('includes/head.ejs')%>
 
-    <div class="center">
-      <h1>404 - Page Not Found</h1>
-      <p>The page you're looking for does not exist.</p>
-    </div>
-  </body>
-</html>
+<link rel="stylesheet" href="/css/404.css" />
+<body>
+  <%-include('includes/navigation.ejs')%>
+  <div class="center">
+    <h1>404 - Page Not Found</h1>
+    <p>The page you're looking for does not exist.</p>
+  </div>
+  <%-include('includes/end.ejs')%>
+</body>
