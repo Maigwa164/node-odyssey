@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title><%= docTitle %></title>
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/users.css" />
-  </head>
-  <body>
-    <nav>
-      <a href="/" class="active">Users</a>
-      <a href="/admin/add-users">Add User</a>
-    </nav>
-
-    <div class="container">
-      <% if (users.length > 0) { %>
-      <ul class="user-list" id="userList">
-        <% for (let user of users) { %>
-        <li><%= user.title %></li>
-        <!-- Adjust according to your user object -->
-        <% } %>
-      </ul>
-      <% } else { %>
-      <h1>No users found</h1>
+<%-include('includes/head.ejs')%>
+<link rel="stylesheet" href="/css/users.css" />
+<body>
+  <%-include('includes/navigation.ejs')%>
+  <div class="container">
+    <% if (users.length > 0) { %>
+    <ul class="user-list" id="userList">
+      <% for (let user of users) { %>
+      <li><%= user.title %></li>
+      <!-- Adjust according to your user object -->
       <% } %>
-    </div>
-  </body>
-</html>
+    </ul>
+    <% } else { %>
+    <h1>No users found</h1>
+    <% } %>
+  </div>
+  <%-include('includes/end.ejs')%>
+</body>
