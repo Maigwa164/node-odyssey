@@ -10,7 +10,7 @@ const users = [];
 
 router.get('/add-users', (req, res, next) => {
   // res.sendFile(path.join(__dirname, '..', 'views', 'add-users.html'));
-  res.render('add-users', { docTitle: 'add-users' });
+  res.render('add-users', { docTitle: 'add-users', path: 'add-users' });
 });
 
 router.post('/add-users', (req, res, next) => {
